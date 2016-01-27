@@ -51,11 +51,15 @@
 		{{#rows}}
 		<div id="{{rowNumber}}" class="tool-box {{#digital}}not-{{/digital}}available">
 			<span class="tool-box-tool">{{book}}</span>
+			
 			<div class="tool-box-bottom {{rowNumber}}">
-				{{#digital}} <span class="tool-box-borrowed">In Dropbox</span>{{/digital}}
+				{{#digital}} 
+					<a href="{{dropboxlink}}" target="_blank">				
+						<span class="download">Download</span>{{/digital}}
+					</a>
 				{{^digital}}
 					<a href="{{amazonlink}}" target="_blank">
-						<span class="tool-box-borrow btn">Get Book</span>
+						<span class="buy btn">Get Book</span>
 					</a>
 				{{/digital}}
 				<ul>
@@ -69,7 +73,13 @@
 					<li><small>NOTES : </small>{{booknotes}}</li>
 					{{/booknotes}}
 				</ul>
+				
+				<div class="book-cover">
+					<img src="{{cover}}">
+				</div>
+				
 			</div>
+			
 		</div>
 		{{/rows}}
 		</script>
