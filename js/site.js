@@ -1,8 +1,8 @@
 function drawToolBox(data) {
-  var tools = ich.tools({
+  var books = ich.books({
     'rows': data
   })
-  $('#tools').html(tools)
+  $('#books').html(books)
 }
 
 $(document).on( 'click', '#showAvailable', toggleAvailable)
