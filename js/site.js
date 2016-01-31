@@ -19,19 +19,19 @@ $(document).on('keyup', '#toolSearch', function(e) {
   if (text === '') return clearSearch(e)
   if ($('.button-pressed').length === 1) {
     console.log('Hide unavailable')
-    $('.tool-box').filter('.not-available').hide()
+    $('.book-box').filter('.not-available').hide()
   }
   filterTools(text)
 })
 
-$(document).on( 'click', '.tool-box-tool', function(e) {
+$(document).on( 'click', '.book-box', function(e) {
   var rowNumber = $(this).closest("div").attr("id")
   if ($(this).closest('div').hasClass('selected-tool')) {
-    $('.tool-box-bottom' + '.' + rowNumber).css('display', 'none')
+    $('.book-box-bottom' + '.' + rowNumber).css('display', 'none')
     $(this).closest('div').removeClass('selected-tool')
   }
   else {
-    $('.tool-box-bottom' + '.' + rowNumber).css('display', 'inherit')
+    $('.book-box-bottom' + '.' + rowNumber).css('display', 'inherit')
     $(this).closest('div').addClass('selected-tool')
   }
 })
@@ -61,7 +61,7 @@ function clearSearch(e) {
 }
 
 function filterTools(text) {
-  $('.tool-box-tool').each(function() {
+  $('.book-title').each(function() {
   var tool = $(this).html().toLowerCase()
   if (tool.match(text)) {
     $(this).parent().show()

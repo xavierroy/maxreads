@@ -12,8 +12,11 @@
 	</head>
 	<body>
 		<header class="container">
-			<h1>Books</h1>
-			<p>A collection of the physical and digital books that I own.</p>
+			<p class="title">A collection of the physical and digital books that I own.</p>
+			<h1>My Library</h1>
+			<hr>
+			<h2>Books.</h2>
+			<p>Among the numerous faults of those who pass their lives recklessly and without due reflexion, my good friend Liberalis, I should say that there is hardly any one so hurtful to society as this, that we neither know how to bestow or how to receive a benefit. It follows from this that benefits are badly invested, and become bad debts: in these cases it is too late to complain of their not being returned, for they were thrown away when we bestowed them.</p>
 		</header>
 		<div id="filters" class="container">
 			<input id="toolSearch" type="search" placeholder="hammer.."></input>
@@ -48,11 +51,62 @@
 		</div>-->
 
 		<script id="books" type="text/html">
-		{{#rows}}
-		<div id="{{rowNumber}}" class="tool-box {{#digital}}not-{{/digital}}available">
-			<span class="tool-box-tool">{{book}}</span>
 			
-			<div class="tool-box-bottom {{rowNumber}}">
+		{{#rows}}
+		
+		<!--<div id="{{rowNumber}}" class="book-box {{#digital}}not-{{/digital}}available">
+
+			<span class="book-title">{{book}}</span>
+			
+			<span class="book-author">{{author}}</span>
+		
+			<div class="book-box-bottom {{rowNumber}}">
+				<a href="{{amazonlink}}" target="_blank">
+					<span class="buy btn">Get Book</span>
+				</a>
+			</div>
+
+			<div class="book-cover">
+				<img src="{{cover}}">
+			</div>
+
+		</div>-->
+		
+		
+		<div id="{{rowNumber}}" class="book-box {{#digital}}not-{{/digital}}available">
+
+
+		
+			<div class="book-box-bottom {{rowNumber}}">
+				<span class="book-title">{{book}}</span>
+				<span class="book-author">{{author}}</span>	<br>
+				<span class="book-author">{{booknotes}}</span>					
+				
+				{{#digital}} 
+					<a href="{{dropboxlink}}" target="_blank">				
+						<span class="download">Download</span>{{/digital}}
+					</a>
+				{{^digital}}													
+					<a href="{{amazonlink}}" target="_blank">
+						<span class="buy btn">Get Book</span>
+					</a>
+				{{/digital}}
+
+							
+			</div>
+
+			<div class="book-cover">
+				<img src="{{cover}}">
+			</div>
+
+		</div>				
+		
+		
+		<!--<div id="{{rowNumber}}" class="tool-box {{#digital}}not-{{/digital}}available">
+			
+			<span class="book-title">{{book}}</span>
+			
+			<div class="book-box-bottom {{rowNumber}}">
 				{{#digital}} 
 					<a href="{{dropboxlink}}" target="_blank">				
 						<span class="download">Download</span>{{/digital}}
@@ -67,8 +121,6 @@
 					<li>{{author}}</li>
 					<li><small>ISBN : </small></li>					
 					<li>{{isbn}}</li>
-					<!--<li>{{street}}, {{city}}, {{state}}</li>
-					<li><a href="https://maps.google.com/maps?q={{street}},{{city}},{{state}}" target="_blank"><small>MAP</small></a></li>-->
 					{{#booknotes}}
 					<li><small>NOTES : </small>{{booknotes}}</li>
 					{{/booknotes}}
@@ -80,8 +132,10 @@
 				
 			</div>
 			
-		</div>
+		</div>-->
+		
 		{{/rows}}
+		
 		</script>
 
 		<script type="text/javascript">
