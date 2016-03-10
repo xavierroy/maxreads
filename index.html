@@ -1,131 +1,74 @@
 <!DOCTYPE html>
-	<html lang="en">
-		<title>Books | Digital and Physical Books that I Own</title>
-		<meta charset='utf-8'>
-		<script type="text/javascript" src="js/ICanHaz.js"></script>
-		<script type="text/javascript" src='js/jquery.js'></script>
-		<script type="text/javascript" src='js/site.js'></script>
-		<script type="text/javascript" src='js/tabletop1.3.4.js'></script>
-		<link rel="shortcut icon" href="https://raw.githubusercontent.com/jlord/lending-library/gh-pages/favico.png"/>
-		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700,900' rel='stylesheet' type='text/css'>
-		<link media="screen" rel="stylesheet" type="text/css" href="css/site.css">
-	</head>
-	<body>
-		<header class="container">
-			<p class="title">A visual collection of the books that I own.</p>
-			<h1>My Library</h1>
-			<hr>
-			<h2>Books.</h2>
-			<p>The titles below represent just a small fraction of my actual library. I love books. I love picking something up, turning the pages, looking at the pictures. I also love the ubiquitous nature of information that digital copies offer. In an attempt to minimize the physical things that I own (and make moving homes a lighter task) over the last four years I've slowly been selling some old books and acquiring digital copies of others. As part of that process, I'm building out this catalog. Many are leftover from college (where I studied cog sci and English lit), some are references for different jobs I've had (in marketing, UX, and business), and a few are random. </p>
-		</header>
-		<!--<div id="filters" class="container">
-			<input id="toolSearch" type="search" placeholder="Search books..."></input>
-			<span class="clear sml-button">Clear</span>
-			<span id="showAvailable" class="sml-button">Show Available</span>
-		</div>-->
-		<div id="books" class="container"><span class="flash animated">LOADING...</span></div>
-		
-		<div id="info" class="container">
-				<div class="span1">
-					<h4>The End.</h4>
-					<p>Entering the details here is an ongoing work-in-progress, and I love using the scanning capabilities of the Goodreads mobile app for this. This catalog is inspired by other <a href="http://otletsshelf.tumblr.com/" target="_blank">projects</a> and <a href="http://bysusanlin.com/library/" target="_blank">book collections</a>. The code is based off the open source code available <a href="http://www.github.com/jlord/lending-library" target="_blank">here.</a></p>
+<html lang="en">
+ <title>Books in 2016</title>
+ <meta charset='utf-8'>
+ <script type="text/javascript" src="js/ICanHaz.js"></script>
+ <script type="text/javascript" src='js/jquery.js'></script>
+ <script type="text/javascript" src='js/site.js'></script>
+ <script type="text/javascript" src='js/tabletop1.3.4.js'></script>
+ <link rel="shortcut icon" href="https://raw.githubusercontent.com/jlord/lending-library/gh-pages/favico.png" />
+ <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700,900' rel='stylesheet' type='text/css'>
+ <link media="screen" rel="stylesheet" type="text/css" href="css/site.css">
+ </head>
 
-				</div>
-		</div>
+ <body>
+  <header class="container">
+   <p class="title">A visual collection of the books I read this year.</p>
+   <h1>My Library</h1>
+   <hr>
+   <h2>2016</h2>
+   <p>This page lists the books I've read in 2016 only.</p>
+   <p>If you want to know all the books I've read since 2004, they are available here. </p>
 
-		<script id="books" type="text/html">
-			
-		{{#rows}}
-		
-		<!--<div id="{{rowNumber}}" class="book-box {{#digital}}not-{{/digital}}available">
+  </header>
 
-			<span class="book-title">{{book}}</span>
-			
-			<span class="book-author">{{author}}</span>
-		
-			<div class="book-box-bottom {{rowNumber}}">
-				<a href="{{amazonlink}}" target="_blank">
-					<span class="buy btn">Get Book</span>
-				</a>
-			</div>
+  <div id="books" class="container"><span class="flash animated"> LOADING </span></div>
 
-			<div class="book-cover">
-				<img src="{{cover}}">
-			</div>
+  </div>
+  <script id="books" type="text/html">
 
-		</div>-->
-		
-		
-		<div id="{{rowNumber}}" class="book-box {{#digital}}not-{{/digital}}available">
+   {{#rows}}
+
+   <div id="{{rowNumber}}" class="book-box {{#digital}}not-{{/digital}}available">
 
 
-		
-			<div class="book-box-bottom {{rowNumber}}">
-				<span class="book-title">{{book}}</span>
-				<span class="book-author">{{author}}</span>	<br>
-				<span class="book-author">{{booknotes}}</span>					
-				
-				{{#digital}} 
-					<a href="{{dropboxlink}}" target="_blank">				
-						<span class="download">Download</span>{{/digital}}
-					</a>
-				{{^digital}}													
-					<a href="{{amazonlink}}" target="_blank">
-						<span class="buy btn">Get Book</span>
-					</a>
-				{{/digital}}
+    <div class="book-cover">
+     <img src="http://images.amazon.com/images/P/{{asin}}.01.LZZZZZZZ.jpg">
+    </div>
+    <div class="book-box-bottom {{rowNumber}}">
+     <span class="book-title">{{label}}</span>
+     <span class="book-author">{{author}}</span>
+     <span class="date-read">{{dateRead}}</span>
+     <br>
+     <a href="http://www.amazon.com/dp/{{asin}}?tag=xavierroycom-21" target="_blank">
+      <span class="buy btn">Get Book</span>
+     </a>
 
-							
-			</div>
 
-			<div class="book-cover">
-				<img src="{{cover}}">
-			</div>
+    </div>
 
-		</div>				
-		
-		
-		<!--<div id="{{rowNumber}}" class="tool-box {{#digital}}not-{{/digital}}available">
-			
-			<span class="book-title">{{book}}</span>
-			
-			<div class="book-box-bottom {{rowNumber}}">
-				{{#digital}} 
-					<a href="{{dropboxlink}}" target="_blank">				
-						<span class="download">Download</span>{{/digital}}
-					</a>
-				{{^digital}}
-					<a href="{{amazonlink}}" target="_blank">
-						<span class="buy btn">Get Book</span>
-					</a>
-				{{/digital}}
-				<ul>
-					<li><small>Author : </small></li>
-					<li>{{author}}</li>
-					<li><small>ISBN : </small></li>					
-					<li>{{isbn}}</li>
-					{{#booknotes}}
-					<li><small>NOTES : </small>{{booknotes}}</li>
-					{{/booknotes}}
-				</ul>
-				
-				<div class="book-cover">
-					<img src="{{cover}}">
-				</div>
-				
-			</div>
-			
-		</div>-->
-		
-		{{/rows}}
-		
-		</script>
 
-		<script type="text/javascript">
-		  document.addEventListener('DOMContentLoaded', function() {
-	      var URL = "1R6Gb6GvAikHhVOcq1bgHxDtUtX7rHWRbK0QbKfKSLn0"
-	      Tabletop.init( { key: URL, callback: drawToolBox, simpleSheet: true } )
-	    })
-		</script>
-	</body>
+
+   </div>
+
+   {{/rows}}
+
+  </script>
+
+  <script type="text/javascript">
+   document.addEventListener('DOMContentLoaded', function() {
+    var URL = "1R6Gb6GvAikHhVOcq1bgHxDtUtX7rHWRbK0QbKfKSLn0"
+    Tabletop.init({
+     key: URL,
+     callback: drawToolBox,
+     simpleSheet: true
+    })
+   })
+
+  </script>
+
+
+  </script>
+ </body>
+
 </html>
