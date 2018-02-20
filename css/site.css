@@ -2,20 +2,20 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
 
 body {
-	font-family: 'Merriweather', serif; 
+	font-family: 'Merriweather', serif;
 	font-weight: lighter;
-	border: 52px #F8F8F8 solid; 
-	margin: 0px; 
+	border: 52px #F8F8F8 solid;
+	margin: 0px;
 	padding: 20px 20px 20px 20px;
 }
 a {text-decoration: none; color: inherit; border-bottom: 1px dotted;}
 a:hover, .book-box.available a:hover, .book-box a:hover {color: #55b6ff; border-color: #55b6ff;}
 small {font-weight: 700; font-size: 11px; letter-spacing: .08em;}
 h1 {
-	font-size: 68px; 
+	font-size: 68px;
 	color: #222;
 	font-weight: 900;
-	letter-spacing: -1px; 
+	letter-spacing: -1px;
 	margin: 30px 0px 20px 0px;
 }
 h2 {
@@ -23,11 +23,11 @@ h2 {
 	margin-bottom: 0;
 }
 h4, h5 {
-	margin: 4px 0px; 
+	margin: 4px 0px;
 }
 h5 {
-	font-weight: lighter; 
-	color: #539dfc; 
+	font-weight: lighter;
+	color: #539dfc;
 	text-transform: uppercase;
 }
 p {
@@ -35,7 +35,7 @@ p {
 	margin-top: 0;
 	line-height: 28px;
 }
-hr {    
+hr {
 	background: #222 none repeat scroll 0 0;
     border: 0 none;
     height: 3px;
@@ -70,27 +70,27 @@ ul.nav a:hover {color: #55b6ff; border-color: #55b6ff;}
 }
 
 input:not([type=submit]):not([type=file]):not([type=checkbox]) {
-	margin: 10px 10px 30px 0px; 
+	margin: 10px 10px 30px 0px;
 	border: none;
-	border-bottom: 3px solid #539dfc; 
-	background-color: transparent; 
+	border-bottom: 3px solid #539dfc;
+	background-color: transparent;
 	padding: 0px;
-	font-family: Source Sans Pro; 
-	color: #888888; 
-	font-size: 1em; 
+	font-family: Source Sans Pro;
+	color: #888888;
+	font-size: 1em;
 	height: 35px;
 	width:250px;
 }
 
 .sml-button {
 	cursor: pointer;
-	padding: 8px 20px; 
-	background-color: #539dfc; 
-	font-weight: 700; 
+	padding: 8px 20px;
+	background-color: #539dfc;
+	font-weight: 700;
 	font-size: 1em;
-	letter-spacing: .1em; 
-	text-align: center; 
-	color: #fff; 
+	letter-spacing: .1em;
+	text-align: center;
+	color: #fff;
 	font-family: "Lato",sans-serif;
 	margin-right: 10px;
 }
@@ -101,11 +101,11 @@ input:not([type=submit]):not([type=file]):not([type=checkbox]) {
    #539dfc; green */
 
 #books {
-	-webkit-column-count:4; 
-	-webkit-column-gap : 30px; 
-	-webkit-column-width: 250px; 
+	-webkit-column-count:4;
+	-webkit-column-gap : 30px;
+	-webkit-column-width: 250px;
 	-moz-column-count:4;
-	-moz-column-gap : 30px; 
+	-moz-column-gap : 30px;
 	-moz-column-width: 250px;
 }
 
@@ -116,13 +116,13 @@ input:not([type=submit]):not([type=file]):not([type=checkbox]) {
 .book-box.available {background: #f8f8f8; color: #000;}
 .book-box.available a {border-color: #fff;}
 .book-box:nth-child(1) {margin-top: 0;}
-.book-title { 
-	display: block; 
-	font-size: 16px; 
-	padding: 10px 0; 
-	text-align: left; 
+.book-title {
+	display: block;
+	font-size: 16px;
+	padding: 10px 0;
+	text-align: left;
 	width: 100%;
-	cursor: pointer; 
+	cursor: pointer;
 	font-weight: 600;
 }
 .book-author {
@@ -135,20 +135,20 @@ input:not([type=submit]):not([type=file]):not([type=checkbox]) {
 .book-box li {margin: 10px 0px;}
 
 .buy {
-	font-family: "Lato",sans-serif;	
-	display: block; 
-	box-sizing: border-box; 
-	-mox-box-sizing: border-box; 
+	font-family: "Lato",sans-serif;
+	display: block;
+	box-sizing: border-box;
+	-mox-box-sizing: border-box;
 	position: relative;
-	background: #2F933C; 
-	color: #ffffff; 
-	padding: 8px 4px; 
-	letter-spacing: .08em; 
+	background: #2F933C;
+	color: #ffffff;
+	padding: 8px 4px;
+	letter-spacing: .08em;
 	font-weight: 900;
-	text-align: center; 
-	width: 100%; 
-	margin: 12px 0px; 
-	cursor: pointer; 
+	text-align: center;
+	width: 100%;
+	margin: 12px 0px;
+	cursor: pointer;
 	border: 1px solid transparent;
 }
 .buy:hover {
@@ -198,15 +198,15 @@ input:not([type=submit]):not([type=file]):not([type=checkbox]) {
   -webkit-transition-delay: 0;
   -moz-transition-delay: 0;
   -ms-transition-delay: 0;
-  -o-transition-delay: 0; 
-}	
+  -o-transition-delay: 0;
+}
 .book-box:hover {
   border-top: 3px solid #539dfc;
   border-bottom: 1px solid #e6e6e6;
   border-right: 1px solid #e6e6e6;
-  border-left: 1px solid #e6e6e6;  
+  border-left: 1px solid #e6e6e6;
  }
-  
+
 .selected-book {opacity: .75;}
 
 a.imglink {border: none;}
