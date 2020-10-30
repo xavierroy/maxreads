@@ -51,17 +51,22 @@
 
   </script>
 
-  <script type="text/javascript">
-   document.addEventListener('DOMContentLoaded', function() {
-    var URL = "1xXeEdUe3SgQWUYF2CjGXd3iqtXPBbQhPEWPmuWVOSsU"
-    Tabletop.init({
-     key: URL,
-     callback: drawToolBox,
-     simpleSheet: true
-    })
-   })
+<script type='text/javascript'>    
+  var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1xXeEdUe3SgQWUYF2CjGXd3iqtXPBbQhPEWPmuWVOSsU/pubhtml';
 
-  </script>
+  function init() {
+    Tabletop.init( { key: publicSpreadsheetUrl,
+                     callback: showInfo,
+                     simpleSheet: true } )
+  }
+
+  function showInfo(data, tabletop) {
+    alert('Successfully processed!')
+    console.log(data);
+  }
+
+  window.addEventListener('DOMContentLoaded', init)
+</script>
 
 
   </script>
